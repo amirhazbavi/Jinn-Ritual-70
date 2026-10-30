@@ -1,0 +1,61 @@
+/* CRT scanlines */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0px,
+        transparent 2px,
+        rgba(0, 0, 0, var(--scanline-opacity)) 3px,
+        transparent 4px
+    );
+    animation: scanline-scroll 8s linear infinite;
+}
+
+/* Static noise overlay */
+.noise {
+    position: fixed;
+    inset: 0;
+    z-index: 9001;
+    pointer-events: none;
+    opacity: var(--noise-opacity);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    animation: noise-shift 0.5s steps(4) infinite;
+}
+
+/* Vignette */
+.vignette {
+    position: fixed;
+    inset: 0;
+    z-index: 9002;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+/* CRT curvature & flicker on whole body */
+.crt-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 8999;
+    pointer-events: none;
+    background: radial-gradient(circle at center, rgba(255, 0, 0, 0.03) 0%, transparent 70%);
+    animation: crt-flicker var(--flicker-speed) infinite alternate;
+}
+
+@keyframes scanline-scroll {
+    from { background-position-y: 0; }
+    to { background-position-y: 100vh; }
+}
+@keyframes noise-shift {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-2%, -3%); }
+    50% { transform: translate(3%, 2%); }
+    75% { transform: translate(-1%, 1%); }
+    100% { transform: translate(2%, -2%); }
+}
+@keyframes crt-flicker {
+    from { opacity: 0.95; }
+    to { opacity: 1; }
+}
