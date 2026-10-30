@@ -1,0 +1,32 @@
+{
+  "name": "@amirhazbavi/jinn-ritual-70",
+  "version": "2.0.0",
+  "description": "Dark-web CRT terminal simulation of a bilingual Russian-Chinese jinn summoning ritual. 70 modular files, serious horror aesthetic.",
+  "type": "module",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node tests/state.test.js && node tests/render.test.js && node tests/ritual.test.js && node tests/timer.test.js && node tests/translations.test.js"
+  },
+  "keywords": [
+    "jinn",
+    "summoning",
+    "dark-web",
+    "crt",
+    "terminal",
+    "horror",
+    "russian",
+    "chinese",
+    "ritual",
+    "glitch"
+  ],
+  "author": "Amir Hazbavi",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amirhazbavi/Jinn-Ritual-70.git"
+  }
+}
