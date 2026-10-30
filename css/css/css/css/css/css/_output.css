@@ -1,0 +1,17 @@
+.terminal-output {
+    max-height: 340px;
+    overflow-y: auto;
+    padding: 1rem 1.5rem 2rem 1.5rem;
+    scroll-behavior: smooth;
+}
+
+.terminal-output::-webkit-scrollbar {
+    width: 6px;
+}
+.terminal-output::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+.terminal-output::-webkit-scrollbar-thumb {
+    background: var(--blood-red);
+    border-radius: 3px;
+}
