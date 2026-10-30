@@ -1,0 +1,51 @@
+
+### 3. `index.html`
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jinn Ritual 70 // DARK TERMINAL</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- CRT overlay layers -->
+    <div class="crt-overlay" aria-hidden="true"></div>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <main class="terminal-window">
+        <!-- Terminal header -->
+        <header class="terminal-header">
+            <span class="terminal-title">root@jinn:~# ./summon --force --dark</span>
+            <span class="terminal-status">ENCRYPTED // TOR</span>
+        </header>
+
+        <!-- Boot sequence -->
+        <section id="boot-sequence" class="boot-section">
+            <p class="boot-line">&gt; INITIALIZING OCCULT SUBSYSTEM...</p>
+            <p class="boot-line">&gt; LOADING RUSSIAN / CHINESE LEXICON...</p>
+            <p class="boot-line">&gt; MOUNTING /dev/mirror...</p>
+            <p class="boot-line">&gt; WARNING: UNKNOWN ENTITY DETECTED</p>
+            <p class="boot-line blink">&gt; AWAITING OPERATOR INPUT</p>
+        </section>
+
+        <!-- Main ritual panel (hidden until boot finishes) -->
+        <section id="ritual-panel" class="hidden">
+            <p id="status-message" class="status-text">
+                НАЖМИТЕ, ЧТОБЫ НАЧАТЬ РИТУАЛ // 点击开始仪式
+            </p>
+            <button id="start-btn" class="glitch-btn" data-text="НАЧАТЬ РИТУАЛ / 开始仪式">
+                НАЧАТЬ РИТУАЛ / 开始仪式
+            </button>
+        </section>
+
+        <!-- Output area -->
+        <section id="output" class="terminal-output hidden" aria-live="polite"></section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
