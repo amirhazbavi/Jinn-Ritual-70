@@ -1,0 +1,61 @@
+.glitch-btn {
+    display: block;
+    margin: 0 auto 2rem auto;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    color: var(--neon-red);
+    border: 1px solid var(--blood-red);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.glitch-btn::before,
+.glitch-btn::after {
+    content: attr(data-text);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--terminal-bg);
+    opacity: 0;
+}
+
+.glitch-btn:hover {
+    background: var(--blood-red);
+    color: #fff;
+    box-shadow: 0 0 30px var(--blood-red), 0 0 60px rgba(255, 0, 0, 0.3);
+}
+
+.glitch-btn:hover::before {
+    opacity: 0.8;
+    color: var(--glitch-cyan);
+    transform: translate(-2px, 2px);
+    clip-path: polygon(0 20%, 100% 20%, 100% 50%, 0 50%);
+    animation: glitch-slice 0.3s steps(2) infinite;
+}
+.glitch-btn:hover::after {
+    opacity: 0.8;
+    color: var(--glitch-magenta);
+    transform: translate(2px, -2px);
+    clip-path: polygon(0 50%, 100% 50%, 100% 80%, 0 80%);
+    animation: glitch-slice 0.25s steps(2) infinite reverse;
+}
+
+.glitch-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+@keyframes glitch-slice {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(-4px, 2px); }
+    100% { transform: translate(4px, -2px); }
+}
