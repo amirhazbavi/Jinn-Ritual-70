@@ -1,0 +1,22 @@
+:root {
+    /* Dark-web palette */
+    --bg-void: #050505;
+    --terminal-bg: #0a0a0a;
+    --terminal-border: #1a1a1a;
+    --text-dim: #5c5c5c;
+    --text-main: #b0b0b0;
+    --text-bright: #e0e0e0;
+    --blood-red: #8b0000;
+    --neon-red: #ff1a1a;
+    --glitch-cyan: #00ffff;
+    --glitch-magenta: #ff00ff;
+
+    /* Effects */
+    --scanline-opacity: 0.15;
+    --noise-opacity: 0.04;
+    --flicker-speed: 0.12s;
+
+    /* Typography */
+    --font-mono: 'Courier New', 'Share Tech Mono', monospace;
+    --font-display: 'Orbitron', sans-serif;
+}
