@@ -1,0 +1,48 @@
+.terminal-window {
+    position: relative;
+    z-index: 10;
+    max-width: 880px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8vh;
+    background: var(--terminal-bg);
+    border: 1px solid var(--terminal-border);
+    border-radius: 6px;
+    box-shadow:
+        0 0 40px rgba(139, 0, 0, 0.25),
+        inset 0 0 80px rgba(0, 0, 0, 0.9);
+    font-family: var(--font-mono);
+    animation: terminal-breathe 6s ease-in-out infinite;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    background: #0d0d0d;
+    border-bottom: 1px solid var(--terminal-border);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.terminal-title {
+    color: var(--blood-red);
+    text-shadow: 0 0 6px var(--blood-red);
+}
+
+.terminal-status {
+    color: var(--neon-red);
+    animation: status-pulse 2s infinite;
+}
+
+@keyframes terminal-breathe {
+    0%, 100% { box-shadow: 0 0 40px rgba(139, 0, 0, 0.25), inset 0 0 80px rgba(0, 0, 0, 0.9); }
+    50% { box-shadow: 0 0 60px rgba(139, 0, 0, 0.45), inset 0 0 120px rgba(0, 0, 0, 1); }
+}
+@keyframes status-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
