@@ -1,0 +1,25 @@
+.status-text {
+    font-size: 1.1rem;
+    color: var(--text-bright);
+    text-align: center;
+    padding: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.15);
+    line-height: 1.8;
+}
+
+#output p {
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--blood-red);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: var(--text-main);
+    text-shadow: 0 0 4px rgba(139, 0, 0, 0.4);
+}
+
+#output p::before {
+    content: "> ";
+    color: var(--neon-red);
+    font-weight: bold;
+}
